@@ -50,3 +50,15 @@ print("Subtraction:", z1 - z2)  # (2+6j)
 print("Multiplication:", z1 * z2)  # (11-2j)
 print("Division:", z1 / z2)  # (-1+2j)
 print("Absolute value:", abs(z1))  # 5.0
+
+
+# Bitwise Operations: Efficient for low-level programming.
+
+
+a = 5  # Binary: 101
+b = 3  # Binary: 011
+print("Bitwise AND:", a & b)  # 1 (Binary: 001)
+print("Bitwise OR:", a | b)   # 7 (Binary: 111)
+print("Bitwise XOR:", a ^ b)  # 6 (Binary: 110)
+print("Bitwise Shift Left:", a << 1)  # 10 (Binary: 1010)
+print("Bitwise Shift Right:", a >> 1)  # 2 (Binary: 10)
