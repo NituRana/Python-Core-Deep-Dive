@@ -62,3 +62,26 @@ print("Bitwise OR:", a | b)   # 7 (Binary: 111)
 print("Bitwise XOR:", a ^ b)  # 6 (Binary: 110)
 print("Bitwise Shift Left:", a << 1)  # 10 (Binary: 1010)
 print("Bitwise Shift Right:", a >> 1)  # 2 (Binary: 10)
+
+
+#
+# 
+# Floating-Point Numbers
+'''
+Represent real numbers.
+Stored as IEEE 754 double precision (64-bit).
+Includes a mantissa and an exponent.
+Advanced Insights
+Precision Issues: Floating-point numbers can have rounding errors.
+'''
+
+
+x = 0.1 + 0.2
+print(x)  # 0.30000000000000004
+# Use decimal module for precise calculations.
+
+
+
+from decimal import Decimal
+x = Decimal('0.1') + Decimal('0.2')
+print(x)  # 0.3
