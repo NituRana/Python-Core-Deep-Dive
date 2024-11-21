@@ -47,7 +47,7 @@ Using ''.join() is faster than + for large concatenations:
 strings = ["a"] * 10
 result = ''.join(strings)
 
-# a) Immutability
+#----------------------------------------  Immutability --------------------------------------------
 
 '''
 Strings are immutable, meaning their content cannot be changed after creation.
@@ -56,6 +56,20 @@ s = "Hello"
 # s[0] = 'J'  # This will raise an error
 s = s.replace("H", "J")  # Creates a new string
 print(s)  # "Jello"
+
+'''
+In-Depth Explanation of Immutability
+Memory Management
+Immutability ensures memory efficiency and thread safety.
+If strings were mutable, modifying one string could unintentionally affect other variables referencing the same string.
+Example:
+
+'''
+s1 = "Hello"
+s2 = s1  # Both `s1` and `s2` point to the same memory
+s1 = s1.replace("H", "J")  # `s1` now points to a new string
+print(s1)  # "Jello"
+print(s2)  # "Hello"
 
 
 # ----------------------------------------- Basic Methods ----------------------------------------
