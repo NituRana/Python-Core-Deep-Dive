@@ -72,7 +72,7 @@ print(s1)  # "Jello"
 print(s2)  # "Hello"
 
 
-# ----------------------------------------- Basic Methods ----------------------------------------
+# ------------------------------------------------ Basic Methods ----------------------------------------
 '''
 Strings offer numerous methods for manipulation:
 '''
@@ -83,3 +83,98 @@ print("Uppercase:", text.upper())  # "PYTHON PROGRAMMING"
 print("Find 'Prog':", text.find("Prog"))  # 7
 print("Replace 'Python' with 'Java':", text.replace("Python", "Java"))  # "Java Programming"
 print("Split by space:", text.split())  # ['Python', 'Programming']
+
+
+#-------------------------------------------------------------------------------------------------------
+#a. Case Modification
+
+s = "Hello World"
+
+print("Lowercase:", s.lower())  # Output: Lowercase: hello world
+print("Uppercase:", s.upper())  # Output: Uppercase: HELLO WORLD
+print("Title Case:", s.title())  # Output: Title Case: Hello World
+print("Swap Case:", s.swapcase())  # Output: Swap Case: hELLO wORLD
+print("Capitalize:", s.capitalize())  # Output: Capitalize: Hello world
+
+#-------------------------------------------------------------------------------------------------------
+# b. Alignment
+
+s = "Hello"
+
+print("Centered:", s.center(20, '-'))  # Output: Centered: -------Hello--------
+print("Left Justified:", s.ljust(20, '*'))  # Output: Left Justified: Hello**************
+print("Right Justified:", s.rjust(20, '*'))
+
+#-------------------------------------------------------------------------------------------------------
+# c. Splitting and Joining
+
+s = "apple,banana,cherry"
+
+# Splitting
+split_list = s.split(',')
+print("Split List:", split_list)  # Output: Split List: ['apple', 'banana', 'cherry']
+
+# Joining
+joined_string = '-'.join(split_list)
+print("Joined String:", joined_string)  # Output: Joined String: apple-banana-cherry
+
+#-------------------------------------------------------------------------------------------------------
+# d. Trimming
+
+s = "   Hello World   "
+
+print("Stripped:", s.strip())  # Output: Stripped: Hello World
+print("Left Stripped:", s.lstrip())  # Output: Left Stripped: Hello World   
+print("Right Stripped:", s.rstrip())  # Output: Right Stripped:    Hello World
+#-------------------------------------------------------------------------------------------------------
+
+# e. String Queries
+
+s = "Hello World"
+
+print("Starts with 'Hello':", s.startswith("Hello"))  # Output: True
+print("Ends with 'World':", s.endswith("World"))  # Output: True
+print("Contains 'World':", "World" in s)  # Output: True
+print("Is Alphabetic:", s.isalpha())  # Output: False
+print("Is Alphanumeric:", "Hello123".isalnum())  # Output: True
+print("Is Digit:", "12345".isdigit())  # Output: True
+print("Is Lowercase:", s.islower())  # Output: False
+print("Is Uppercase:", s.isupper())  # Output: False
+print("Is Space:", "   ".isspace())  # Output: True
+
+#-------------------------------------------------------------------------------------------------------
+# 5. Advanced String Operations
+# a. Replace
+
+s = "apples are red"
+modified = s.replace("apples", "oranges")
+print("Modified:", modified)  # Output: Modified: oranges are red
+
+#-------------------------------------------------------------------------------------------------------
+# b. Find and Index
+
+s = "find the needle in the haystack"
+print("First occurrence of 'needle':", s.find("needle"))  # Output: 10
+print("First occurrence of 'haystack':", s.index("haystack"))  # Output: 21
+
+#-------------------------------------------------------------------------------------------------------
+# c. Count
+
+s = "banana"
+print("Count of 'a':", s.count('a'))  # Output: 3
+
+#-------------------------------------------------------------------------------------------------------
+# d. Partition
+
+s = "apple-banana-cherry"
+print("Partition on '-':", s.partition('-'))  
+# Output: Partition on '-': ('apple', '-', 'banana-cherry')
+
+#-------------------------------------------------------------------------------------------------------
+# e. Translate
+
+s = "apple"
+translation_table = str.maketrans("aep", "xyz")
+translated = s.translate(translation_table)
+print("Translated:", translated)  # Output: xzzly
+#-------------------------------------------------------------------------------------------------------

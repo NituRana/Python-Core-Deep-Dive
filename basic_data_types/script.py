@@ -44,7 +44,7 @@ num_str = "123"
 print("String to Integer:", int(num_str))
 print("String to Float:", float(num_str))
 
-
+print("\n------------------------------------------ Boolean Logic --------------------------------------")
 # Boolean Logic
 print("\nBoolean Logic:")
 is_raining = True
