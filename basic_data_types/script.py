@@ -1,35 +1,49 @@
-# Integer Operations
-print("Integer Operations:")
-x = 10
-y = 3
-print(f"x: {x}, y: {y}")
-print(f"Addition: {x + y}")
-print(f"Subtraction: {x - y}")
-print(f"Multiplication: {x * y}")
-print(f"Division: {x / y}")  # Results in float
-print(f"Floor Division: {x // y}")
-print(f"Modulus: {x % y}")
-print(f"Power: {x ** y}")
-
-# Float Operations
-print("\nFloat Operations:")
-a = 5.7
-b = 2.3
+# Handling Integers
+print("---------------------- Integer Operations ------------------------")
+a = 10
+b = 3
 print(f"a: {a}, b: {b}")
-print(f"Addition: {a + b}")
-print(f"Type Casting to Integer: int(a) = {int(a)}")
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)  # Returns float
+print("Floor Division:", a // b)  # Integer division
+print("Modulus:", a % b)
+print("Exponentiation:", a ** b)
 
-# String Operations
-print("\nString Operations:")
+print("\n-------------------- Type conversion: Integer to Float ---------------------")
+# Type conversion: Integer to Float
+a_float = float(a)
+print("Converted to float:", a_float)
+
+# Handling Floats
+print("\n-------------------------- Float Operations -------------------------------")
+x = 5.75
+y = 2.5
+print(f"x: {x}, y: {y}")
+print("Addition:", x + y)
+print("Rounding:", round(x))
+print("Type Conversion (float to int):", int(x))  # Truncates the decimal
+
+# Handling Strings
+print("\n-------------------------- String Operations ------------------------------")
 s1 = "Hello"
 s2 = "World"
 print(f"s1: {s1}, s2: {s2}")
-print(f"Concatenation: {s1 + ' ' + s2}")
-print(f"Repetition: {s1 * 3}")
+print("Concatenation:", s1 + " " + s2)
+print("Repetition:", s1 * 3)
+print("Substring:", s1[1:4])  # Substring from index 1 to 3
+print("Case conversion (Upper):", s1.upper())
 print(f"Character at index 1: {s1[1]}")
 print(f"Slicing: {s1[1:4]}")
-print(f"Uppercase: {s1.upper()}")
 print(f"Split: {s1.split('e')}")
+
+print("\n-------------------------- Type Conversion: String to Integer/Float ------------------------------")
+# Type Conversion: String to Integer/Float
+num_str = "123"
+print("String to Integer:", int(num_str))
+print("String to Float:", float(num_str))
+
 
 # Boolean Logic
 print("\nBoolean Logic:")
