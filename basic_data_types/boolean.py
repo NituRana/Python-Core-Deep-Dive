@@ -55,3 +55,14 @@ Falsy: Values considered as False in a Boolean context.
 8. set() (empty set)
 All other values are considered Truthy.
 '''
+
+#-------------------------------------- Boolean and Bitwise Operations -----------------------------------
+
+# Booleans can also be used with bitwise operators (&, |, ^, ~).
+# Code Example:
+
+
+print(True & False)  # Output: False
+print(True | False)  # Output: True
+print(True ^ False)  # Output: True
+print(~True)         # Output: -2
