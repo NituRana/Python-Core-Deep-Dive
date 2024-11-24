@@ -102,3 +102,39 @@ numbers.index(10)
 numbers.sort()
 # reverse()	Reverses the list in place
 numbers.reverse()
+
+#================================================================================================================
+#-------------------------------------------- Applications of Lists -----------------------------------------
+#================================================================================================================
+
+# 1. Storing Dynamic Data
+# Lists are ideal for managing data that changes over time, such as a shopping cart.
+
+cart = []
+cart.append("apple")
+cart.append("banana")
+cart.remove("apple")
+print(cart)  # Output: ['banana']
+
+#---------------------------------------------------------------------------------------------------------
+# 2. Iterative Processing
+# Lists are iterable, making them perfect for loops.
+
+
+numbers = [1, 2, 3]
+for num in numbers:
+    print(num)
+
+#---------------------------------------------------------------------------------------------------------
+# 3. Matrix Representation
+# Nested lists can represent matrices.
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Accessing elements
+print(matrix[1][2])  # Output: 6
+#---------------------------------------------------------------------------------------------------------
