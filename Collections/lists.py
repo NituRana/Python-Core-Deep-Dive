@@ -103,9 +103,9 @@ numbers.sort()
 # reverse()	Reverses the list in place
 numbers.reverse()
 
-#================================================================================================================
-#-------------------------------------------- Applications of Lists -----------------------------------------
-#================================================================================================================
+#==========================================================================================================
+#-------------------------------------------- Applications of Lists ---------------------------------------
+#==========================================================================================================
 
 # 1. Storing Dynamic Data
 # Lists are ideal for managing data that changes over time, such as a shopping cart.
@@ -137,4 +137,36 @@ matrix = [
 
 # Accessing elements
 print(matrix[1][2])  # Output: 6
+
+#==========================================================================================================
+#-------------------------------------------- Pitfalls and Gotchas ---------------------------------------
+#==========================================================================================================
+
+# 1. Reference vs. Copy
+# Mutating a list affects all references to it.
+
+original = [1, 2, 3]
+copy = original
+copy[0] = 42
+print(original)  # Output: [42, 2, 3] (changes reflect in both)
+
+# Solution: Use slicing or copy() for a shallow copy.
+
+
+copy = original[:]
+# or
+copy = original.copy()
+
 #---------------------------------------------------------------------------------------------------------
+# 2. Iterating While Modifying
+# Directly modifying a list while iterating can cause unexpected behavior.
+
+numbers = [1, 2, 3]
+for num in numbers:
+    if num == 2:
+        numbers.remove(num)
+print(numbers)  # Output: [1, 3] (skips elements)
+
+# Solution: Use list comprehension or iterate over a copy.
+
+numbers = [num for num in numbers if num != 2]
