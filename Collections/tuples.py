@@ -157,3 +157,17 @@ user = ("John Doe", "john@example.com", 42)
 # 3. Multi-threaded Programming
 # Tuples ensure thread-safety because they cannot be modified.
 #-------------------------------------------------------------------------------------------------------------
+
+#==========================================================================================================
+#---------------------------------------- Pitfalls of Tuples ----------------------------------------
+#==========================================================================================================
+
+# 1. Single-Element Tuples
+# A tuple with one element must include a comma; otherwise, it’s interpreted as a regular value.
+
+single = (42)  # Not a tuple
+print(type(single))  # Output: <class 'int'>
+
+single = (42,)
+print(type(single))  # Output: <class 'tuple'>
+#-------------------------------------------------------------------------------------------------------------
