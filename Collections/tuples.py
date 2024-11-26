@@ -98,18 +98,62 @@ print(result)  # Output: (1, 4)
 # Unpacking the tuple
 minimum, maximum = result
 print(minimum, maximum)  # Output: 1 4
-#---------------------------------------------- Key Operations -------------------------------------------
 
-#---------------------------------------------- Key Operations -------------------------------------------
+#==========================================================================================================
+#---------------------------------------------- Advanced Features -------------------------------------------
+#==========================================================================================================
 
-#---------------------------------------------- Key Operations -------------------------------------------
+# 1. Tuple Packing and Unpacking
+# Packing is combining multiple elements into a tuple, while unpacking extracts elements from a tuple.
 
-#---------------------------------------------- Key Operations -------------------------------------------
+# Packing
+packed = 1, 2, 3
+print(packed)  # Output: (1, 2, 3)
 
-#---------------------------------------------- Key Operations -------------------------------------------
+# Unpacking
+a, b, c = packed
+print(a, b, c)  # Output: 1 2 3
+#-------------------------------------------------------------------------------------------------------------
+# 2. Nested Tuples
+# Tuples can contain other tuples, enabling multi-level structures.
 
-#---------------------------------------------- Key Operations -------------------------------------------
+nested = ((1, 2), (3, 4))
+print(nested[1][0])  # Output: 3
 
-#---------------------------------------------- Key Operations -------------------------------------------
+#-------------------------------------------------------------------------------------------------------------
+# 3. Immutability and Hashing
+# Tuples are hashable if all their elements are hashable. This makes them ideal for use in sets or as dictionary keys.
+
+# Set of tuples
+unique_points = {(1, 2), (3, 4), (1, 2)}
+print(unique_points)  # Output: {(1, 2), (3, 4)}
+
+#-------------------------------------------------------------------------------------------------------------
+# Common Tuple Methods
+# Method	Description	Example
+# count(x)	Counts occurrences of x in the tuple
+(1, 2, 2, 3).count(2) #output  2
+# index(x)	Returns the first index of x	
+(1, 2, 3).index(3) #output  2
+
+#==========================================================================================================
+#---------------------------------------- Applications of Tuples ----------------------------------------
+#==========================================================================================================
+# 1. Immutable Data
+# Tuples are used when immutability is desired to prevent accidental modification.
 
 
+# Immutable configuration
+config = ("localhost", 8080)
+
+#-------------------------------------------------------------------------------------------------------------
+# 2. Structuring Data
+# Tuples often represent lightweight records or data structures.
+
+# Example: Storing database records
+user = ("John Doe", "john@example.com", 42)
+
+#-------------------------------------------------------------------------------------------------------------
+# 3. Multi-threaded Programming
+# Tuples ensure thread-safety because they cannot be modified.
+#-------------------------------------------------------------------------------------------------------------
