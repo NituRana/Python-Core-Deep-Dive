@@ -171,3 +171,25 @@ print(type(single))  # Output: <class 'int'>
 single = (42,)
 print(type(single))  # Output: <class 'tuple'>
 #-------------------------------------------------------------------------------------------------------------
+
+'''
+Performance Considerations
+Tuples vs. Lists
+Tuples are generally faster than lists for operations like iteration and lookup because they are immutable.
+'''
+
+import time
+
+# Compare tuple and list iteration
+numbers_tuple = tuple(range(10**6))
+numbers_list = list(range(10**6))
+
+start = time.time()
+sum(numbers_tuple)
+end = time.time()
+print("Tuple iteration time:", end - start)
+
+start = time.time()
+sum(numbers_list)
+end = time.time()
+print("List iteration time:", end - start)
