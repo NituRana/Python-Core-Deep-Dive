@@ -123,4 +123,24 @@ print(999_999 in large_set)  # Output: True
 #------------------------------------------------------------------------------------------------------------------
 # 3. Set Algebra
 # Useful for tasks like filtering data, comparing datasets, and more.
+
 #------------------------------------------------------------------------------------------------------------------
+#===================================================================================================================
+#------------------------------------------- Advanced Features of  Sets -------------------------------------------
+
+# 1. Frozen Sets
+# A frozenset is an immutable version of a set. You can use it when you need a set but cannot allow modification.
+
+
+A = frozenset([1, 2, 3])
+print(A)  # Output: frozenset({1, 2, 3})
+
+# Immutable, so this raises an error
+# A.add(4)  # AttributeError: 'frozenset' object has no attribute 'add'
+#------------------------------------------------------------------------------------------------------------------
+
+# 2. Nested Sets (Using Frozen Sets)
+# Because regular sets are mutable and unhashable, you can use frozensets to create nested sets.
+
+nested_set = {frozenset([1, 2]), frozenset([3, 4])}
+print(nested_set)  # Output: {frozenset({1, 2}), frozenset({3, 4})}
