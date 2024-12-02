@@ -137,10 +137,48 @@ print(A)  # Output: frozenset({1, 2, 3})
 
 # Immutable, so this raises an error
 # A.add(4)  # AttributeError: 'frozenset' object has no attribute 'add'
-#------------------------------------------------------------------------------------------------------------------
 
+#------------------------------------------------------------------------------------------------------------------
 # 2. Nested Sets (Using Frozen Sets)
 # Because regular sets are mutable and unhashable, you can use frozensets to create nested sets.
 
 nested_set = {frozenset([1, 2]), frozenset([3, 4])}
 print(nested_set)  # Output: {frozenset({1, 2}), frozenset({3, 4})}
+#------------------------------------------------------------------------------------------------------------------
+#===================================================================================================================
+#------------------------------------------- Common Set Methods ----------------------------------------------------
+
+# Method	Description	Example :
+
+# add(x)	            | Adds an element x to the set	                    | s.add(1)
+# remove(x)	            | Removes x (raises an error if x not found)	    | s.remove(1)
+# discard(x)	        | Removes x (no error if x not found)	            | s.discard(1)
+# clear()	            | Removes all elements	                            | s.clear()
+# union(other)	        | Returns a new set with elements from both sets	| s.union(t)
+# intersection(other)	| Returns a new set with common elements	        | s.intersection(t)
+# difference(other)	    | Returns a new set with elements not in other	    | s.difference(t)
+#------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------- Applications of Sets ------------------------------------------------
+
+# 1. Comparing Datasets
+# Use sets to find unique, common, or missing elements between datasets.
+
+# Finding common students
+math_students = {"Alice", "Bob", "Charlie"}
+science_students = {"Bob", "Diana"}
+
+common_students = math_students & science_students
+print(common_students)  # Output: {'Bob'}
+
+#---------------------------------------------------
+# 2. Removing Duplicate Words
+# Process text to remove duplicate words.
+
+text = "apple banana apple cherry banana"
+unique_words = set(text.split())
+print(unique_words)  # Output: {'apple', 'banana', 'cherry'}
+
+#---------------------------------------------------
+# 3. Optimizing Search Queries
+# Use sets to find matching keywords quickly.
+#------------------------------------------------------------------------------------------------------------------
