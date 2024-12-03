@@ -47,3 +47,42 @@ print(student)  # Output: {'name': 'John', 'age': 21, 'grade': 'A'}
 # Modifying an existing key-value pair
 student["age"] = 22
 print(student)  # Output: {'name': 'John', 'age': 22, 'grade': 'A'}
+
+#-------------------------------------------------------------------------------------------------------------------
+# 4. Deleting Entries
+
+del student["grade"]
+print(student)  # Output: {'name': 'John', 'age': 22}
+
+# Using pop() (returns the removed value)
+age = student.pop("age")
+print(age)       # Output: 22
+print(student)   # Output: {'name': 'John'}
+
+# Removing all entries
+student.clear()
+print(student)  # Output: {}
+
+#-------------------------------------------------------------------------------------------------------------------
+
+# 5. Iterating Over a Dictionary
+
+student = {"name": "John", "age": 21, "grade": "A"}
+
+# Iterate over keys
+for key in student:
+    print(key)  # Output: name, age, grade
+
+# Iterate over values
+for value in student.values():
+    print(value)  # Output: John, 21, A
+
+# Iterate over key-value pairs
+for key, value in student.items():
+    print(f"{key}: {value}")
+# Output:
+# name: John
+# age: 21
+# grade: A
+
+#-------------------------------------------------------------------------------------------------------------------
