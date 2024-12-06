@@ -112,4 +112,65 @@ words = ['apple', 'banana', 'cherry']
 lengths = {word: len(word) for word in words}
 print(lengths)  # Output: {'apple': 5, 'banana': 6, 'cherry': 6}
 #-------------------------------------------------------------------------------------------------------------------
-#-------------------------------------------------------------------------------------------------------------------
+#-------------------------------------- Real-World Applications ----------------------------------------------------
+
+
+# a. Data Cleaning
+# List comprehensions are often used to clean or process datasets.
+
+# Example: Removing Extra Spaces
+
+data = ["  apple", "banana  ", "  cherry  "]
+cleaned_data = [item.strip() for item in data]
+print(cleaned_data)  # Output: ['apple', 'banana', 'cherry']
+#-------------------------------------------------------------------------
+
+# b. Extracting Specific Data
+# Filter or extract relevant data from collections.
+
+# Example: Extracting Usernames
+
+users = [
+    {"name": "Alice", "age": 25},
+    {"name": "Bob", "age": 30},
+    {"name": "Charlie", "age": 35},
+]
+usernames = [user["name"] for user in users]
+print(usernames)  # Output: ['Alice', 'Bob', 'Charlie']
+#-------------------------------------------------------------------------
+
+
+# c. Performance Improvement
+# List comprehensions are faster than traditional loops in most cases.
+
+# Example: Comparing Performance
+
+import timeit
+
+# Using list comprehension
+list_comp_time = timeit.timeit("[x ** 2 for x in range(1000)]", number=10000)
+
+# Using loop
+loop_time = timeit.timeit("""
+result = []
+for x in range(1000):
+    result.append(x ** 2)
+""", number=10000)
+
+print(f"List Comprehension: {list_comp_time}, Loop: {loop_time}")
+# Output: List Comprehension is significantly faster
+
+#-------------------------------------------------------------------------
+# d. Data Transformation in Files
+# Transform or filter data from files using list comprehension.
+
+# Example: Reading Only Error Logs
+
+logs = [
+    "INFO: All systems operational",
+    "ERROR: Disk full",
+    "WARNING: High memory usage",
+    "ERROR: Network timeout"
+]
+error_logs = [log for log in logs if log.startswith("ERROR")]
+print(error_logs)  # Output: ['ERROR: Disk full', 'ERROR: Network timeout']
