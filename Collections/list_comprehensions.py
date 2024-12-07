@@ -174,3 +174,15 @@ logs = [
 ]
 error_logs = [log for log in logs if log.startswith("ERROR")]
 print(error_logs)  # Output: ['ERROR: Disk full', 'ERROR: Network timeout']
+
+#-------------------------------------- -------------- Summary ----------------------------------------------------
+
+
+'''
+List comprehensions are a versatile tool in Python that can handle transformations, filtering, and even nested loops. They are:
+
+Faster than traditional loops.
+Concise and easier to read (for simple cases).
+Flexible for a variety of tasks (lists, sets, dictionaries).
+
+'''
