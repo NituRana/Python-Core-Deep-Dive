@@ -74,3 +74,21 @@ def multiplier(factor):
 
 double = multiplier(2)
 print(double(5))  # Output: 10
+
+#-----------------------------------------------------------------------------------------------------------
+# c. Anonymous Functions (Lambdas)
+# Lambda functions are single-expression, unnamed functions.
+
+'''
+Syntax:
+
+lambda arguments: expression
+'''
+
+add = lambda x, y: x + y
+print(add(3, 5))  # Output: 8
+
+nums = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x ** 2, nums))
+print(squared)  # Output: [1, 4, 9, 16, 25]
+#-----------------------------------------------------------------------------------------------------------
