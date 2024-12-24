@@ -14,7 +14,7 @@ def function_name(parameters):
     return result
 
 #-------------------------------------------- Advanced Function Concepts ------------------------------------
-
+# a. Variable-Length Arguments
 # Handle functions with arbitrary numbers of arguments.
 
 # 1. Positional Arguments (*args):
@@ -39,3 +39,38 @@ print_details(name="Alice", age=30, city="NYC")
 # city: NYC
 
 #-----------------------------------------------------------------------------------------------------------
+# b. First-Class Functions
+# Functions in Python are first-class citizens, meaning:
+
+'''
+They can be assigned to variables.
+They can be passed as arguments.
+They can be returned from other functions.
+'''
+
+# 1. Assigning Functions to Variables:
+
+def square(x):
+    return x ** 2
+
+sq = square
+print(sq(5))  # Output: 25
+
+
+# 2. Passing Functions as Arguments:
+def apply(func, value):
+    return func(value)
+
+def double(x):
+    return x * 2
+
+print(apply(double, 5))  # Output: 10
+
+# 3. Returning Functions:
+def multiplier(factor):
+    def multiply(x):
+        return x * factor
+    return multiply
+
+double = multiplier(2)
+print(double(5))  # Output: 10
