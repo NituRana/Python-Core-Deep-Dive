@@ -92,3 +92,15 @@ nums = [1, 2, 3, 4, 5]
 squared = list(map(lambda x: x ** 2, nums))
 print(squared)  # Output: [1, 4, 9, 16, 25]
 #-----------------------------------------------------------------------------------------------------------
+
+# d. Closures
+# A closure is a function with an enclosed scope that remembers variables from its parent function.
+
+def outer_function(msg):
+    def inner_function():
+        print(msg)
+    return inner_function
+
+hello = outer_function("Hello, World!")
+hello()  # Output: Hello, World!
+#-----------------------------------------------------------------------------------------------------------
