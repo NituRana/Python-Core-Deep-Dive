@@ -41,7 +41,7 @@ print(greet())  # Output: Hello, World!
 # 3. Advanced Usage
 
 
-a. Using Lambda with Built-In Functions
+# a. Using Lambda with Built-In Functions
 #----------------------- 1. -------------------------------
 
 # map()
@@ -70,3 +70,18 @@ from functools import reduce
 nums = [1, 2, 3, 4, 5]
 product = reduce(lambda x, y: x * y, nums)
 print(product)  # Output: 120
+
+#------------------------------------------------------------------------------------------------------------
+# Sorting with Lambda
+# Sorting by Key
+
+data = [{'name': 'Alice', 'age': 30}, {'name': 'Bob', 'age': 25}, {'name': 'Charlie', 'age': 35}]
+sorted_data = sorted(data, key=lambda x: x['age'])
+print(sorted_data)
+# Output: [{'name': 'Bob', 'age': 25}, {'name': 'Alice', 'age': 30}, {'name': 'Charlie', 'age': 35}]
+
+#------------------------------ 1. ------------------------
+
+words = ["apple", "banana", "cherry"]
+sorted_words = sorted(words, key=lambda x: len(x))
+print(sorted_words)  # Output: ['apple', 'cherry', 'banana']
