@@ -85,3 +85,31 @@ print(sorted_data)
 words = ["apple", "banana", "cherry"]
 sorted_words = sorted(words, key=lambda x: len(x))
 print(sorted_words)  # Output: ['apple', 'cherry', 'banana']
+
+#------------------------------------------------------------------------------------------------------------
+# 7. Summary
+# Lambda functions offer a concise and efficient way to write small, single-expression functions. They are particularly useful for:
+
+'''
+1. Functional programming (map, filter, reduce).
+2. Custom sorting.
+3. Event handling in GUIs.
+4. Inline operations that are short-lived.
+5. Final Example: Complex Lambda in Action
+'''
+
+employees = [
+    {'name': 'Alice', 'salary': 70000},
+    {'name': 'Bob', 'salary': 80000},
+    {'name': 'Charlie', 'salary': 60000}
+]
+
+# Filter employees with salary > 65000 and sort by salary
+filtered_sorted = sorted(
+    filter(lambda e: e['salary'] > 65000, employees),
+    key=lambda e: e['salary']
+)
+
+print(filtered_sorted)
+# Output:
+# [{'name': 'Alice', 'salary': 70000}, {'name': 'Bob', 'salary': 80000}]
