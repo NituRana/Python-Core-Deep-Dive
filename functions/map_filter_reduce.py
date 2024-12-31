@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------
-# 1. map()
+# ====================================================== 1. map() ====================================================
 # The map() function is used to apply a function to each item in an iterable (like a list, tuple, or set) and returns a new iterable (of type map).
 
 
@@ -8,6 +8,7 @@
 '''
 function: A function that specifies the operation to be applied.
 iterable: One or more iterable objects.
+
 Key Points
 The function can be a regular function or a lambda.
 If multiple iterables are passed, the function must accept as many arguments as there are iterables.
@@ -38,3 +39,40 @@ upper_names = map(str.upper, names)
 print(list(upper_names))  # Output: ['ALICE', 'BOB', 'CHARLIE']
 
 #---------------------------------------------------------------------------------------------------------------------
+# =================================================== 2. filter() ====================================================
+
+# The filter() function is used to filter elements from an iterable based on a condition specified in a function. It returns an iterable containing only the elements for which the function evaluates to True.
+
+'''
+Syntax
+
+filter(function, iterable)
+'''
+'''
+function: A function that returns True or False.
+iterable: The iterable to be filtered.
+Key Points
+The function should return a boolean value.
+Only elements for which the function returns True are included in the result.
+'''
+
+# Filtering even numbers:
+
+
+nums = [1, 2, 3, 4, 5, 6]
+evens = filter(lambda x: x % 2 == 0, nums)
+print(list(evens))  # Output: [2, 4, 6]
+
+# Filtering Strings
+# Filtering names with length greater than 3:
+
+names = ["Bob", "Alice", "Eve", "Charlie"]
+long_names = filter(lambda name: len(name) > 3, names)
+print(list(long_names))  # Output: ['Alice', 'Charlie']
+
+# Practical Application
+# Filtering out None values:
+
+data = [0, None, "Hello", "", 42]
+valid_data = filter(None, data)  # None acts as a truthiness filter
+print(list(valid_data))  # Output: ['Hello', 42]
