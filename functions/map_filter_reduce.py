@@ -76,3 +76,47 @@ print(list(long_names))  # Output: ['Alice', 'Charlie']
 data = [0, None, "Hello", "", 42]
 valid_data = filter(None, data)  # None acts as a truthiness filter
 print(list(valid_data))  # Output: ['Hello', 42]
+
+#---------------------------------------------------------------------------------------------------------------------
+# 3. reduce()
+# The reduce() function, part of the functools module, is used to apply a function cumulatively to the items of an iterable, reducing it to a single value.
+
+# Syntax
+
+'''
+from functools import reduce
+reduce(function, iterable, initializer=None)
+function: A function that takes two arguments and returns a single value.
+iterable: The iterable to be reduced.
+initializer: (Optional) Initial value to start the reduction.
+
+Key Points
+The function must accept two arguments: the accumulated value and the next element in the iterable.
+Reduction proceeds left to right.
+Examples
+Basic Example
+Finding the product of all elements:
+'''
+
+from functools import reduce
+
+nums = [1, 2, 3, 4]
+product = reduce(lambda x, y: x * y, nums)
+print(product)  # Output: 24
+
+
+# With an Initializer
+# Concatenating strings with an initializer:
+
+
+words = ["hello", "world", "python"]
+sentence = reduce(lambda x, y: x + " " + y, words, "Start:")
+print(sentence)  # Output: Start: hello world python
+
+# Practical Application
+# Finding the maximum value in a list:
+
+
+nums = [3, 5, 2, 8, 1]
+max_value = reduce(lambda x, y: x if x > y else y, nums)
+print(max_value)  # Output: 8
