@@ -120,3 +120,30 @@ print(sentence)  # Output: Start: hello world python
 nums = [3, 5, 2, 8, 1]
 max_value = reduce(lambda x, y: x if x > y else y, nums)
 print(max_value)  # Output: 8
+
+#---------------------------------------------------------------------------------------------------------------------
+
+# Real-World Applications
+
+# Data Transformation
+# Using map() for data preparation:
+
+prices = ["$5.00", "$3.50", "$4.20"]
+cleaned_prices = map(lambda x: float(x[1:]), prices)
+print(list(cleaned_prices))  # Output: [5.0, 3.5, 4.2]
+
+# Data Cleaning
+# Using filter() to remove invalid data:
+
+ages = [25, -1, 34, 0, 22]
+valid_ages = filter(lambda x: x > 0, ages)
+print(list(valid_ages))  # Output: [25, 34, 22]
+
+# Aggregation
+# Using reduce() for cumulative calculations:
+
+sales = [100, 200, 300, 400]
+total_sales = reduce(lambda x, y: x + y, sales)
+print(total_sales)  # Output: 1000
+
+#---------------------------------------------------------------------------------------------------------------------
