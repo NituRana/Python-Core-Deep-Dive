@@ -29,3 +29,6 @@ account = BankAccount("Alice", 1000)
 # Deposit and withdraw using methods
 account.deposit(500)  # Output: 500 deposited. New balance: 1500
 account.withdraw(2000)  # Output: Insufficient balance!
+
+# Attempt to access private attribute directly (will raise an error)
+# print(account.__balance)  # AttributeError: 'BankAccount' object has no attribute '__balance'\
