@@ -17,6 +17,8 @@ Topics:
 Lists, Tuples, Sets, Dictionaries
 List Comprehensions
 Goal: Create an example where each data structure is the best tool for the job (e.g., managing a catalog of items).
+
+
 Functions and Lambda Expressions
 
 Module Name: functions
