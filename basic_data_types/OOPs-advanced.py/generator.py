@@ -62,3 +62,36 @@ for num in counter:
 # 3
 # 4
 # 5
+
+
+# Practical Applications of Generators
+# 1. Generating Infinite Sequences
+
+def infinite_sequence():
+    num = 0
+    while True:
+        yield num
+        num += 1
+
+gen = infinite_sequence()
+for _ in range(5):
+    print(next(gen))
+# Output:
+# 0
+# 1
+# 2
+# 3
+# 4
+
+
+
+# 2. Reading Large Files
+# Generators are ideal for processing large files line-by-line without loading the entire file into memory.
+
+def read_large_file(file_path):
+    with open(file_path, 'r') as file:
+        for line in file:
+            yield line.strip()
+
+for line in read_large_file("large_file.txt"):
+    print(line)
