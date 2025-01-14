@@ -40,3 +40,25 @@ print(next(gen))  # Output: 1
 print(next(gen))  # Output: 2
 print(next(gen))  # Output: 3
 # print(next(gen))  # Raises StopIteration
+
+
+# How yield Works
+# The yield statement pauses the generator and saves its state (including local variables). On the next call, it resumes from where it left off.
+
+# State Persistence
+
+def count_up_to(limit):
+    count = 1
+    while count <= limit:
+        yield count  # Pause and return count
+        count += 1
+
+counter = count_up_to(5)
+for num in counter:
+    print(num)
+# Output:
+# 1
+# 2
+# 3
+# 4
+# 5
