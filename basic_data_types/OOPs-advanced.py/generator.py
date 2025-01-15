@@ -95,3 +95,51 @@ def read_large_file(file_path):
 
 for line in read_large_file("large_file.txt"):
     print(line)
+
+
+# Advanced Topics
+# 1. Generator with send()
+# The send() method can be used to send a value to the generator, resuming its execution and optionally changing its state.
+
+
+def generator_with_send():
+    value = yield "Start"
+    while value < 5:
+        value = yield value * 2
+
+gen = generator_with_send()
+print(next(gen))  # Output: Start
+print(gen.send(2))  # Output: 4
+print(gen.send(4))  # Output: 8
+
+
+# 2. Generator throw()
+# The throw() method raises an exception inside the generator.
+
+
+def generator_with_throw():
+    try:
+        yield "Start"
+        yield "Middle"
+    except Exception as e:
+        yield f"Exception caught: {e}"
+
+gen = generator_with_throw()
+print(next(gen))  # Output: Start
+print(gen.throw(Exception("Error occurred")))
+# Output: Exception caught: Error occurred
+
+
+
+# 3. Generator close()
+# The close() method stops the generator.
+
+
+def closeable_generator():
+    yield 1
+    yield 2
+
+gen = closeable_generator()
+print(next(gen))  # Output: 1
+gen.close()
+# Any further calls to `next(gen)` will raise a StopIteration exception.
