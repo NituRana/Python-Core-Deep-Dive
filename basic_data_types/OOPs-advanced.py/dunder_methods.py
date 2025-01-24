@@ -65,3 +65,29 @@ overloading.
 # __len__: Defines the behavior of len().
 # __iter__: Enables iteration over an object.
 #------------------------------------------------------------------------------------------------------------
+
+
+# 1. Initialization and Representation
+
+class Person:
+    def __init__(self, name, age):
+        """Called when a new object is created and initializes attributes."""
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        """Readable representation for users (e.g., used in print)."""
+        return f"{self.name}, {self.age} years old"
+
+    def __repr__(self):
+        """Detailed representation for debugging."""
+        return f"Person(name={self.name}, age={self.age})"
+
+# Creating an object
+person = Person("Alice", 30)
+
+# __str__ in action
+print(person)  # Output: Alice, 30 years old
+
+# __repr__ in action
+print(repr(person))  # Output: Person(name=Alice, age=30)
