@@ -26,6 +26,7 @@ overloading.
 
 # 1. Initialization and Representation
 
+#------------------------------------------------------------------------------------------------------------
 # __init__: Called when an object is initialized.
 # __str__: Provides a readable string representation of an object.
 # __repr__: Provides a detailed, developer-friendly string representation.
@@ -36,15 +37,12 @@ overloading.
 
 #------------------------------------------------------------------------------------------------------------
 # __add__, __sub__, __mul__, etc., allow operator overloading for custom objects.
-
 #------------------------------------------------------------------------------------------------------------
 
 # 3. Comparison Operators
 
 #------------------------------------------------------------------------------------------------------------
-
 # __eq__, __lt__, __gt__, etc., enable custom comparison logic.
-
 #------------------------------------------------------------------------------------------------------------
 
 # 4. Container-Like Behavior
