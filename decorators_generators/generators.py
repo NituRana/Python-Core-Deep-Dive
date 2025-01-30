@@ -44,3 +44,37 @@ class Counter:
 counter = Counter(1, 5)
 for num in counter:
     print(num)  # Output: 1 2 3 4 5
+
+
+
+'''
+2. Generators
+What is a Generator?
+A generator is a simpler way to create iterators using functions and the yield keyword.
+Instead of returning a value and terminating, the yield statement pauses the function, saving its state for the next call.
+How to Create a Generator
+Generators are created using functions or generator expressions.
+
+Using a Function with yield
+'''
+
+
+
+# Example: Simple Generator
+def count_up_to(n):
+    count = 1
+    while count <= n:
+        yield count
+        count += 1
+
+# Usage
+for num in count_up_to(5):
+    print(num)  # Output: 1 2 3 4 5
+
+# Using a Generator Expression
+# Example: Generator Expression
+squares = (x ** 2 for x in range(5))
+
+# Usage
+for square in squares:
+    print(square)  # Output: 0 1 4 9 16
