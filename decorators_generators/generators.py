@@ -78,3 +78,17 @@ squares = (x ** 2 for x in range(5))
 # Usage
 for square in squares:
     print(square)  # Output: 0 1 4 9 16
+
+# Key Differences Between Iterators and Generators
+# Feature	Iterator	Generator
+# Creation	        Implement __iter__() and __next__() methods manually.	                    Use a function with yield.
+# Syntax	        Requires more boilerplate code.	                                            Concise and easy to write.
+# State             Maintenance	Must manually track state.	                                    Automatically maintains state between yields.
+# Memory            Efficiency	Can be less memory efficient when dealing with large datasets.	Memory-efficient; produces items on demand.
+
+
+# 4. Advantages of Generators
+#----------------------------------------------------------------
+# Lazy Evaluation: Values are generated on the fly, reducing memory usage.
+# Ease of Use: Fewer lines of code compared to manual iterator implementation.
+# Performance: Ideal for large datasets or streams where values are consumed sequentially.
