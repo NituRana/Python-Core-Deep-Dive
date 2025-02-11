@@ -1,6 +1,7 @@
 '''
 
-Abstraction hides the internal details and shows only the essential features. In Python, abstraction can be achieved using abstract base classes (ABC module).
+Abstraction hides the internal details and shows only the essential features. In Python, abstraction can be achieved 
+using abstract base classes (ABC module).
 
 '''
 

@@ -1,6 +1,7 @@
 '''
 
-Inheritance allows a class (child) to inherit properties and methods from another class (parent), promoting code reuse.
+Inheritance allows a class (child) to inherit properties and methods from another class (parent),
+ promoting code reuse.
 
 '''
 

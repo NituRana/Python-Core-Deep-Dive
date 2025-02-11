@@ -1,6 +1,7 @@
 '''
 
-Polymorphism means "many forms." It allows objects of different classes to be treated as objects of a common parent class, and methods to behave differently based on the object.
+Polymorphism means "many forms." It allows objects of different classes to be treated as objects of a common parent class,
+and methods to behave differently based on the object.
 
 '''
 class Shape:
