@@ -26,3 +26,27 @@ obj = MyClass()
 print(obj.greet())  # Output: Hello from MyClass
 
 #------------------------------------------------------------------------------
+
+#  2. Introspection
+
+'''
+Introspection is the ability to examine objects at runtime.
+It involves using functions like type(), isinstance(), hasattr(), dir(), etc.
+'''
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} says hello!")
+
+#------------------------------------------------------------------------------
+# Checking attributes and methods
+dog = Animal("Buddy")
+print(type(dog))  # <class '__main__.Animal'>
+print(isinstance(dog, Animal))  # True
+print(hasattr(dog, 'name'))  # True
+print(dir(dog))  # Lists all attributes and methods of 'dog'
+
+#------------------------------------------------------------------------------
